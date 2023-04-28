@@ -12,7 +12,7 @@
 }
 .apresentacao__curriculo__proprio{
     border-radius: 16px;
-    width: 1000px;
+    width: 90%;
     font-family: var(--font-textos);
     font-size: 1.125rem;
     font-weight: 400;
@@ -20,7 +20,7 @@
     border: 2px solid var(--cor-fundo);
     display: flex;
     gap: 80px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .apresentacao__curriculo__nome{
@@ -29,8 +29,7 @@
     font-size: 2.25rem;
 }
 .apresentacao__curriculo__foto{
-    height: 120px;
-    width: 90px;
+    width: 20%;
     border-radius: 18px;
     border: 3px solid var(--cor-fundo);
 }
@@ -41,7 +40,7 @@
     font-weight: 400;
     border-radius: 18px;
     border: 2px solid var(--cor-fundo);
-    width: 1000px;
+    width: 90%;
     padding: 2%;
     gap: 10px;
     display: flex;
@@ -54,4 +53,126 @@
     font-size: 1.5rem;
     font-family: var(--font-textos);
     font-weight: 600;
+}
+@media (max-width: 1201px){
+    .apresentacao__curriculo{
+        gap: 10px;
+        padding: 5% 10%;
+    }
+    .apresentacao__curriculo__proprio{
+        border-radius: 14px;
+        width: 91%;
+        font-size: 1rem;
+        gap: 10%;
+        padding: 2%;
+    }
+    .apresentacao__curriculo__nome{
+        font-size: 2rem;
+    }
+    .apresentacao__curriculo__foto{
+        width: 17%;
+        border-radius: 14px;
+    }
+    .apresentacao__curriculo__profissional{
+        font-size: 1rem;
+        width: 85%;
+        border-radius: 14px;
+        padding: 5%;
+    }
+    .curriculo__titulos{
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 841px){
+    .body__curriculo{
+        background-color: var(--cor-hover);
+        color: var(--cor-texto);
+    }
+    .apresentacao__curriculo{
+        padding: 3% 7%;
+    }
+    .apresentacao__curriculo__proprio{
+        width: 86%;
+        font-size: 0.7rem;
+        padding: 1%;
+        border: 2px solid var(--cor-texto);
+        border-radius: 12px;
+    }
+    .apresentacao__curriculo__nome{
+        font-size: 1.75rem;
+    }
+    .apresentacao__curriculo__foto{
+        width: 15%;
+        border: 1px solid var(--cor-texto);
+        border-radius: 12px;
+    }
+    .apresentacao__curriculo__profissional{
+        font-size: 0.7rem;
+        border: 2px solid var(--cor-texto);
+        width: 78%;
+        border-radius: 12px;
+    }
+    .curriculo__titulos{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 691px){
+    .apresentacao__curriculo__nome{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 426px){
+    .apresentacao__curriculo__proprio{
+        width: 94%;
+        font-size: 0.6rem;
+        padding: 1%;
+        gap: 5%;
+        border: 2px solid var(--cor-texto);
+        border-radius: 8px;
+    }
+    .apresentacao__curriculo__nome{
+        font-size: 1rem;
+    }
+    .apresentacao__curriculo__foto{
+        width: 20%;
+        border: 1px solid var(--cor-texto);
+        border-radius: 8px;
+    }
+    .apresentacao__curriculo__profissional{
+        font-size: 0.6rem;
+        border: 2px solid var(--cor-texto);
+        width: 86%;
+        border-radius: 8px;
+    }
+    .curriculo__titulos{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 321px){
+    .apresentacao__curriculo__proprio{
+        width: 96%;
+        font-size: 0.4rem;
+        padding: 1%;
+        gap: 5%;
+        border: 2px solid var(--cor-texto);
+        border-radius: 4px;
+    }
+    .apresentacao__curriculo__nome{
+        color: var(--cor-destaque);
+        font-family: var(--font-titulos); /*fonte utilizada*/
+        font-size: 0.5rem;
+    }
+    .apresentacao__curriculo__foto{
+        border: 1px solid var(--cor-texto);
+        border-radius: 4px;
+    }
+    .apresentacao__curriculo__profissional{
+        font-size: 0.4rem;
+        border: 2px solid var(--cor-texto);
+        width: 88%;
+        border-radius: 4px;
+    }
+    .curriculo__titulos{
+        font-size: 1rem;
+    }
 }
