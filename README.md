@@ -1,7 +1,7 @@
 # Portfólio 
 ### Olá, Bem vindo ao meu projeto de portfólio.
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fwallpaper-desktop&psig=AOvVaw3VYH2pxQZ5IFVVf_jB8x4X&ust=1683054532806000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPDDke7o1P4CFQAAAAAdAAAAABAE)
+![image](https://user-images.githubusercontent.com/67551638/235227999-a7804a1b-6356-4c84-8b8e-1c6bf02029d5.png)
 
 ## Ferramentas utilizadas:
 
