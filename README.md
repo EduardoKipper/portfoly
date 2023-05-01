@@ -1,7 +1,7 @@
 # Portfólio 
 ### Olá, Bem vindo ao meu projeto de portfólio.
 
-![image](https://user-images.githubusercontent.com/67551638/235227999-a7804a1b-6356-4c84-8b8e-1c6bf02029d5.png)
+![image](https://img.freepik.com/vetores-gratis/fundo-colorido-silhuetas-de-palmeiras_23-2148549780.jpg)
 
 ## Ferramentas utilizadas:
 
