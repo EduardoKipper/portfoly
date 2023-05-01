@@ -1,7 +1,7 @@
 # Portfólio 
 ### Olá, Bem vindo ao meu projeto de portfólio.
 
-![image](https://user-images.githubusercontent.com/67551638/235227999-a7804a1b-6356-4c84-8b8e-1c6bf02029d5.png)
+![image](https://user-images.githubusercontent.com/67551638/235513578-ed13e1a4-0d82-4cbc-893d-8a84d0301fd3.png)
 
 ## Ferramentas utilizadas:
 
