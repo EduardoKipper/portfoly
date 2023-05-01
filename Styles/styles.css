@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import "./cabecalho.css";
 /*importa a fonte Krona One e Montserrat do Google Fonts*/
 :root{
     --cor-texto: #f6f6f6;
@@ -20,31 +21,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
-.cabecalho{
-    padding: 2% 0 2% 150px;
-    background-color: var(--cor-hover);
-    /* border-bottom: 2px solid var(--cor-destaque); */
-}
-.cabecalho__menu{
-    display: flex;
-    gap: 15px;
-}
-.cabecalho__menu__link{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    padding: 12px;
-    text-decoration: none;
-    font-family: var(--font-textos);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--cor-destaque);
-}
-.cabecalho__menu__link:hover{
-    color: var(--cor-texto);
-    background-color: var(--cor-hover);
-    border-radius: 8px;
-}
+
 .icones{
     width: 1.125rem;
 }
@@ -117,12 +94,12 @@ body {
     padding: 1.35rem 3%;
     background-color: var(--cor-hover);
     color: var(--cor-destaque);
+    transition: 0.4s;
 }
 .rodape{
     padding: 24px;
     color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-    border-top: 2px solid var(--cor-destaque);
+    background-color: var(--cor-hover);
 
     text-align: center;
     font-family: var(--font-textos);
