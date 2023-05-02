@@ -1,0 +1,174 @@
+.icones{
+    width: 1.125rem;
+}
+.apresentacao{
+    padding:  5% 10%;
+    display: flex; /*utiliza o FLEXBOX*/
+    justify-content: center;
+    align-items: center; /*centraliza os elementos*/
+    gap: 82px; /*espaço entre os elementos*/
+}
+.apresentacao__imagem{
+    width: 50%;
+    border-radius: 46px;
+    border: 2px solid var(--cor-destaque);
+}
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo {
+    font-family: var(--font-titulos); /*fonte utilizada*/
+    font-size: 2.25rem;
+}
+.apresentacao__conteudo__titulo__destaque {
+    color: var(--cor-destaque);
+}
+.apresentacao__conteudo__paragrafo {
+    text-align: justify;
+    font-family: var(--font-textos);
+    font-size: 1.5rem;
+    font-weight: 400; /*"peso" da fonte*/
+}
+.apresentacao__conteudo__paragrafo__destaque {
+    color: var(--cor-destaque-claro);
+}
+
+.apresentacao__conteudo__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    gap: 32px;
+}
+.apresentacao__conteudo__links__subtitulo{
+    font-family: var(--font-titulos);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__conteudo__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    text-decoration: none; /*tira a decoração do texto*/
+    text-align: center; /*alinha o texto*/
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+
+    width: 90%;
+    padding: 1.35rem 0; /*espaço entre o conteúdo e a borda, o primeiro valor é o height e o segundo o width*/
+    border: 2px solid var(--cor-destaque);
+    border-radius: 8px; /*cria uma borda arredondada*/
+ 
+
+    font-family: var(--font-textos);
+    font-weight: 600;
+}
+.apresentacao__conteudo__links__navegacao:hover{
+    /* estiliza o código quando passar o mouse em cima */
+    padding: 1.35rem 3%;
+    background-color: var(--cor-hover);
+    color: var(--cor-destaque);
+    transition: 0.4s;
+}
+@media (max-width: 1200px){    
+    .apresentacao{
+        align-items: flex-start;
+    }
+    .apresentacao__imagem{
+        width: 40%;
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1rem;
+    }
+    .apresentacao__conteudo__links__navegacao{
+        width: 340px;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    .apresentacao__conteudo__links__navegacao:hover{
+        padding: 1rem 3%;
+    }
+    .icones{
+        width: 1rem;
+    }
+}
+@media (max-width: 840px){    
+    .apresentacao{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .apresentacao__conteudo{
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .apresentacao__conteudo__titulo {
+        text-align: center;
+    }
+    .apresentacao__conteudo__links{
+        gap: 1.5rem;
+    }
+    .apresentacao__conteudo__links__subtitulo{
+        font-size: 1rem;
+    }
+    .apresentacao__conteudo__links__navegacao:hover{
+        background-color: #454545;
+    }
+}
+/* @media (max-width: 690px){} */
+@media (max-width: 425px){
+    .icones{
+        width: 0.75rem;
+    }
+    .apresentacao__imagem{
+        width: 70%;
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 1rem;
+    }
+    .apresentacao__conteudo__paragrafo {
+        font-size: 0.75rem;
+    }
+    .apresentacao__conteudo__links{
+        gap: 1rem;
+    }
+    .apresentacao__conteudo__links__navegacao{
+        width: 285px;
+        padding: 0.75rem 0;
+        font-size: 0.75rem;
+    }
+    .apresentacao__conteudo__links__navegacao:hover{
+        padding: 0.75rem 3%;
+    }
+}
+@media (max-width: 375px){
+    .icones{
+        width: 0.5rem;
+    }
+    .apresentacao__imagem{
+        width: 70%;
+    }
+    .apresentacao__conteudo__paragrafo{
+        font-size: 0.5rem;
+    }
+    .apresentacao__conteudo__links__subtitulo{
+        font-size: 0.5rem;
+    }
+    .apresentacao__conteudo__links__navegacao{
+        width: 200px;
+        padding: 0.5rem 0;
+        font-size: 0.5rem;
+    }
+    .apresentacao__conteudo__links__navegacao:hover{
+        padding: 0.5rem 3%;
+    }
+}

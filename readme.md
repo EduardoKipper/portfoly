@@ -1,8 +1,7 @@
-```
+# Portfólio 
+### Olá, Bem vindo ao meu projeto de portfólio.
 
-# Portfólio Olá, Bem vindo ao meu projeto de portfólio.
-
-![image](https://user-images.githubusercontent.com/67551638/235225756-5c2f38a2-71ba-4365-96f2-d252ea150ff2.png)
+![image](https://user-images.githubusercontent.com/67551638/235513578-ed13e1a4-0d82-4cbc-893d-8a84d0301fd3.png)
 
 ## Ferramentas utilizadas:
 
@@ -17,5 +16,3 @@
 ### Eduardo Kipper
 
 ### Linkedin: https://www.linkedin.com/in/eduardo-kipper-3451771a4/
-
-```
