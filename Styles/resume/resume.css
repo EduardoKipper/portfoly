@@ -54,7 +54,7 @@
     font-family: var(--font-textos);
     font-weight: 600;
 }
-@media (max-width: 1201px){
+@media (max-width: 1200px){
     .apresentacao__curriculo{
         gap: 10px;
         padding: 5% 10%;
@@ -83,7 +83,7 @@
         font-size: 1.25rem;
     }
 }
-@media (max-width: 841px){
+@media (max-width: 840px){
     .body__curriculo{
         background-color: var(--cor-hover);
         color: var(--cor-texto);
@@ -116,12 +116,12 @@
         font-size: 1rem;
     }
 }
-@media (max-width: 691px){
+@media (max-width: 690px){
     .apresentacao__curriculo__nome{
         font-size: 1.5rem;
     }
 }
-@media (max-width: 426px){
+@media (max-width: 425px){
     .apresentacao__curriculo__proprio{
         width: 94%;
         font-size: 0.6rem;
@@ -148,7 +148,7 @@
         font-size: 1rem;
     }
 }
-@media (max-width: 321px){
+@media (max-width: 375px){    
     .apresentacao__curriculo__proprio{
         width: 96%;
         font-size: 0.4rem;

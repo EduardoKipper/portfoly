@@ -1,0 +1,31 @@
+.rodape{
+    padding: 24px;
+    color: var(--cor-texto);
+    background-color: var(--cor-hover);
+
+    text-align: center;
+    font-family: var(--font-textos);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+/* @media (max-width: 1200px){} */
+@media (max-width: 840px){ 
+    .rodape{
+    font-size: 1rem;
+    background-color: var(--cor-hover);}
+}
+/* @media (max-width: 690px){} */
+@media (max-width: 425px){
+    .rodape{
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 375px){
+    .rodape{
+        font-size: 0.5rem;
+    }
+}
