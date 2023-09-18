@@ -85,7 +85,7 @@
 }
 @media (max-width: 840px){
     .body__curriculo{
-        background-color: var(--cor-hover);
+        background-color: var(--cor-fundo);
         color: var(--cor-texto);
     }
     .apresentacao__curriculo{
