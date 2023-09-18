@@ -1,6 +1,6 @@
 .body__curriculo{
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     box-sizing: border-box;
 }
 .apresentacao__curriculo{
@@ -17,7 +17,7 @@
     font-size: 1.125rem;
     font-weight: 400;
     padding: 2%;
-    border: 2px solid var(--cor-fundo);
+    border: 2px solid var(--cor-hover);
     display: flex;
     gap: 80px;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 .apresentacao__curriculo__foto{
     width: 20%;
     border-radius: 18px;
-    border: 3px solid var(--cor-fundo);
+    border: 3px solid var(--cor-hover);
 }
 .apresentacao__curriculo__profissional{
     text-align: justify;
@@ -39,7 +39,7 @@
     font-size: 1.25rem;
     font-weight: 400;
     border-radius: 18px;
-    border: 2px solid var(--cor-fundo);
+    border: 2px solid var(--cor-hover);
     width: 90%;
     padding: 2%;
     gap: 10px;

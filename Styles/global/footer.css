@@ -1,7 +1,7 @@
 .rodape{
     padding: 24px;
-    color: var(--cor-texto);
-    background-color: var(--cor-hover);
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
 
     text-align: center;
     font-family: var(--font-textos);
@@ -16,7 +16,7 @@
 @media (max-width: 840px){ 
     .rodape{
     font-size: 1rem;
-    background-color: var(--cor-hover);}
+    background-color: var(--cor-texto);}
 }
 /* @media (max-width: 690px){} */
 @media (max-width: 425px){
