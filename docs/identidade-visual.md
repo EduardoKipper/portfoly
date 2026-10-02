@@ -25,12 +25,13 @@ Estilos específicos de um componente ficam em um arquivo `.css` ao lado dele e 
 | `--text`       | Marfim    | `#F5F1E8` | Títulos e texto principal            |
 | `--accent`     | Âmbar     | `#F28A2E` | CTA principal, links e assinatura    |
 | `--sage`       | Sálvia    | `#9DB28C` | Destaques de resultados              |
-| `--rose`       | Rosa seco | `#D18B9F` | Detalhes editoriais e foco           |
+| `--rose`       | Rosa seco | `#D18B9F` | Detalhes editoriais                  |
 
 Regras:
 
 - Texto Marfim ou Névoa sobre Noite ou Ardósia. Nunca Marfim sobre Âmbar, Sálvia ou Rosa seco.
-- Botão principal: fundo Âmbar com texto Noite (`--on-accent`). No hover o rótulo ganha sublinhado; pressionado desloca 1 px.
+- Botão principal: fundo Âmbar com texto Noite (`--on-accent`). No hover o fundo clareia para `--accent-hover`; pressionado desloca 1 px.
+- Links não usam sublinhado (pedido do usuário em 02/10/2026). São identificados pela cor Âmbar e pelo contexto (menu, botões, setas); no hover passam para Marfim.
 - Um acento dominante por bloco.
 - Novos pares de cor para texto entram na lista de `contrast.test.ts`, que exige 4,5:1.
 
@@ -49,5 +50,9 @@ Regras:
 
 ## Foco e movimento
 
-- Foco visível em todo elemento interativo: contorno Rosa seco de 2 px com afastamento de 3 px.
+- Foco visível em todo elemento interativo: contorno Âmbar de 2 px com afastamento de 3 px. A especificação sugeria Rosa seco; o usuário pediu Âmbar em 02/10/2026. O teste de contraste garante pelo menos 3:1 sobre os fundos.
 - Transições de 150 a 220 ms. Com `prefers-reduced-motion: reduce`, as durações vão a zero e a rolagem suave é desligada.
+
+## Seletor de idioma
+
+`src/components/LanguageSwitch.tsx`: um switch (`role="switch"`) com as bandeiras do Brasil e dos EUA. Desligado é português e ligado é inglês. Troca com clique, toque, teclado (Espaço ou Enter) ou arrastando o anel Âmbar até a outra bandeira, e mantém a página e a seção atuais. As bandeiras são SVG decorativos (`Flags.tsx`); o nome acessível vem do conteúdo (`site.header.englishVersion`).

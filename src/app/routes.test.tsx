@@ -96,12 +96,20 @@ describe('página principal', () => {
     expect(within(nav).getByRole('link', { name: 'Contato' })).toHaveAttribute('href', '/#contato')
   })
 
-  it('troca de idioma mantendo a página', () => {
-    renderRoute('/projetos/automacao-caixa')
-    expect(screen.getByRole('link', { name: /English/ })).toHaveAttribute(
-      'href',
-      '/en/projects/automacao-caixa',
-    )
+  it('troca de idioma pelo switch mantendo a página', async () => {
+    const user = userEvent.setup()
+    const { router } = renderRoute('/projetos/automacao-caixa')
+    const toggle = screen.getByRole('switch', { name: 'Versão em inglês' })
+    expect(toggle).toHaveAttribute('aria-checked', 'false')
+
+    await user.click(toggle)
+    expect(router.state.location.pathname).toBe('/en/projects/automacao-caixa')
+    const englishToggle = screen.getByRole('switch', { name: 'English version' })
+    expect(englishToggle).toHaveAttribute('aria-checked', 'true')
+
+    englishToggle.focus()
+    await user.keyboard(' ')
+    expect(router.state.location.pathname).toBe('/projetos/automacao-caixa')
   })
 
   it('abre e fecha o menu móvel, inclusive com Escape', async () => {

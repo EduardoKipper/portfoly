@@ -413,8 +413,12 @@ collections:
             fields:
               - { name: openMenu, label: Abrir menu, widget: string, i18n: true }
               - { name: closeMenu, label: Fechar menu, widget: string, i18n: true }
-              - { name: languageLabel, label: Rótulo do idioma, widget: string, i18n: true }
-              - { name: switchLanguage, label: Nome do outro idioma, widget: string, i18n: true }
+              - {
+                  name: englishVersion,
+                  label: Rótulo do seletor de idioma (leitores de tela),
+                  widget: string,
+                  i18n: true,
+                }
           - name: resume
             label: Currículo
             widget: object

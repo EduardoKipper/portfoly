@@ -1,19 +1,18 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router'
+import { Link } from 'react-router'
 import { useContent, useLocale } from '../i18n/LocaleContext'
-import { alternatePath, homePath, htmlLang, type Locale } from '../i18n/locales'
+import { homePath } from '../i18n/locales'
 import { assetUrl } from '../lib/assetUrl'
+import { LanguageSwitch } from './LanguageSwitch'
 import { SectionLink } from './SectionLink'
 import './Header.css'
 
 export function Header() {
   const locale = useLocale()
   const { site } = useContent()
-  const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const menuId = useId()
   const toggleRef = useRef<HTMLButtonElement>(null)
-  const otherLocale: Locale = locale === 'pt' ? 'en' : 'pt'
 
   useEffect(() => {
     if (!menuOpen) return
@@ -66,16 +65,7 @@ export function Header() {
             </ul>
           </nav>
           <div className="site-header__actions">
-            <Link
-              to={alternatePath(pathname, otherLocale)}
-              lang={htmlLang[otherLocale]}
-              hrefLang={htmlLang[otherLocale]}
-              className="site-header__language"
-              onClick={closeMenu}
-            >
-              <span className="visually-hidden">{site.header.languageLabel}: </span>
-              {site.header.switchLanguage}
-            </Link>
+            <LanguageSwitch onChange={closeMenu} />
             {site.resume.file && (
               <a href={assetUrl(site.resume.file)} className="button button--secondary" download>
                 {site.resume.label}

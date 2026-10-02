@@ -77,12 +77,9 @@
   cursor: pointer;
   transition:
     transform var(--duration-fast) var(--ease),
-    background-color var(--duration-fast) var(--ease);
-}
-
-.button:hover {
-  text-decoration-line: underline;
-  text-decoration-thickness: 1px;
+    background-color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease),
+    color var(--duration-fast) var(--ease);
 }
 
 .button:active {
@@ -94,18 +91,40 @@
   color: var(--on-accent);
 }
 
+.button--primary:hover {
+  background: var(--accent-hover);
+  color: var(--on-accent);
+}
+
 .button--secondary {
   border-color: var(--border-strong);
   background: transparent;
   color: var(--text);
 }
 
+.button--secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .button--ghost {
   padding-inline: 0;
   background: transparent;
   color: var(--text);
-  text-decoration-line: underline;
-  text-underline-offset: 0.35em;
+}
+
+.button--ghost::after {
+  color: var(--accent);
+  content: '→';
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.button--ghost:hover {
+  color: var(--accent);
+}
+
+.button--ghost:hover::after {
+  transform: translateX(3px);
 }
 
 /* Cards */

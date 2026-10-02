@@ -34,6 +34,7 @@ const textPairs: [foreground: string, background: string][] = [
   ['sage', 'surface'],
   ['rose', 'surface'],
   ['bg', 'accent'],
+  ['bg', 'accent-hover'],
   ['bg', 'sage'],
   ['bg', 'rose'],
 ]
@@ -41,6 +42,13 @@ const textPairs: [foreground: string, background: string][] = [
 describe('contraste da paleta', () => {
   it.each(textPairs)('%s sobre %s atinge 4,5:1', (foreground, background) => {
     expect(contrast(token(foreground), token(background))).toBeGreaterThanOrEqual(4.5)
+  })
+
+  it('usa Âmbar no foco com pelo menos 3:1 sobre os fundos', () => {
+    expect(tokensCss).toMatch(/--focus-color:\s*var\(--accent\)/)
+    for (const background of ['bg', 'surface']) {
+      expect(contrast(token('accent'), token(background))).toBeGreaterThanOrEqual(3)
+    }
   })
 
   it('reprova Marfim sobre Âmbar, como indicado na especificação', () => {
