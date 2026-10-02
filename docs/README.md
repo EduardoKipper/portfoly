@@ -1,6 +1,7 @@
 # Documentação
 
 - [Arquitetura](arquitetura.md): stack, estrutura de pastas e rotas.
+- [Identidade visual](identidade-visual.md): tokens de cor, tipografia, espaço e foco.
 - [Conteúdo e idiomas](conteudo-e-idiomas.md): onde ficam os textos e como adicionar um novo.
 - [Decisões](decisoes.md): registro das decisões de arquitetura.
 - [Roteiro](roteiro.md): etapas planejadas e o que já foi feito.

@@ -5,7 +5,7 @@
 - **Vite + React 19 + TypeScript**: site estático (SPA), sem servidor próprio.
 - **React Router** (modo de dados, `createBrowserRouter`): rotas por idioma.
 - **oxlint** para lint e **Prettier** para formatação.
-- **Vitest + Testing Library + jsdom** para testes.
+- **Vitest + Testing Library + jsdom** para testes. Os testes têm um tsconfig próprio (`tsconfig.test.json`), com tipos do Node, separado do código do app.
 
 ## Estrutura de pastas
 
@@ -15,6 +15,7 @@ src/
   pages/        Uma página por rota: HomePage, ProjectPage, NotFoundPage
   i18n/         Idiomas, caminhos por idioma e acesso ao conteúdo
   content/      Textos do site, um diretório por idioma (pt/, en/)
+  styles/       Tokens e estilos globais (ver identidade-visual.md)
   test/         Configuração e utilitários de teste
 public/         Arquivos servidos sem processamento (favicon, futuramente /admin e o currículo)
 docs/           Esta documentação
