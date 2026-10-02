@@ -11,10 +11,10 @@
   gap: 6px;
   /* Área de toque de 44 px de altura; a pílula visível fica centralizada. */
   min-height: var(--target-min);
-  padding: calc((var(--target-min) - var(--flag-h)) / 2 - 1px) 7px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: var(--bg);
+  padding: calc((var(--target-min) - var(--flag-h)) / 2) 7px;
+  border: 0;
+  border-radius: var(--radius-button);
+  background: transparent;
   cursor: pointer;
   touch-action: pan-y;
   user-select: none;
@@ -70,6 +70,7 @@
   transition: none;
 }
 
-.language-switch:hover {
-  border-color: var(--accent);
+.language-switch:hover .language-switch__flag {
+  opacity: 1;
+  filter: none;
 }
