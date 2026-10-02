@@ -23,7 +23,6 @@ export function ProjectPage() {
 
   return (
     <article className="section">
-      <title>{format(site.meta.projectPageTitle, { title: project.title })}</title>
       <div className="container project-detail">
         <SectionLink anchor="projetos" className="project-detail__back">
           <span aria-hidden="true">←</span> {labels.backToProjects}

@@ -49,6 +49,11 @@ describe('rotas', () => {
     expect(screen.getByRole('link', { name: 'Back to portfolio' })).toHaveAttribute('href', '/en')
   })
 
+  it('atualiza o título da aba ao navegar', async () => {
+    renderRoute('/en/projects/automacao-caixa')
+    await waitFor(() => expect(document.title).toBe('Cash process automation — Eduardo Kipper'))
+  })
+
   it('oferece o link para pular ao conteúdo', () => {
     renderRoute('/')
     expect(screen.getByRole('link', { name: 'Pular para o conteúdo' })).toHaveAttribute(

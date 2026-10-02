@@ -8,8 +8,6 @@ export function NotFoundPage() {
 
   return (
     <section className="section">
-      <title>{site.notFound.title}</title>
-      <meta name="robots" content="noindex" />
       <div className="container not-found">
         <h1>{site.notFound.title}</h1>
         <Link to={homePath(locale)} className="button button--primary">
