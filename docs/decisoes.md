@@ -20,3 +20,10 @@ Escolhido pelo usuário entre Decap CMS, Supabase com admin próprio e adiar o a
 ## 004 · oxlint em vez de ESLint (02/10/2026)
 
 O modelo atual do Vite já vem com oxlint, que é mais rápido e cobre as regras de React e TypeScript necessárias.
+
+## 005 · Hospedagem no GitHub Pages via Actions (02/10/2026)
+
+Pedido do usuário. Publicação gratuita a partir do próprio repositório, com deploy a cada push no `main`.
+
+- Consequência para o painel admin (etapa 5): o Decap CMS com backend GitHub precisa de um serviço de autenticação OAuth, que o GitHub Pages não oferece. Será preciso um pequeno proxy OAuth externo (por exemplo, um Cloudflare Worker gratuito) ou mover a hospedagem para um serviço que já o forneça.
+- Rotas profundas dependem do `404.html` como fallback (ver [arquitetura](arquitetura.md#publicação)).

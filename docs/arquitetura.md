@@ -37,4 +37,12 @@ docs/           Esta documentação
 
 ## Publicação
 
-Por ser uma SPA, o servidor precisa devolver `index.html` para qualquer rota desconhecida (fallback). Isso será configurado junto com o deploy na etapa 6 do [roteiro](roteiro.md).
+O site é publicado no **GitHub Pages** pelo workflow `.github/workflows/ci.yml`:
+
+- Em todo push e pull request, roda lint, formatação, verificação de tipos, testes e build.
+- Só em push no branch `main`, o job de deploy publica `dist/` no Pages.
+- O site fica em `https://eduardokipper.github.io/portfoly/`. O workflow define `BASE_PATH=/<repositório>/`, que vira o `base` do Vite e o `basename` do React Router (via `import.meta.env.BASE_URL`). Localmente o base continua `/`.
+- O Pages não tem fallback de SPA, então o workflow copia `index.html` para `404.html`. Rotas profundas como `/portfoly/en/projects/...` abrem o app normalmente, mas respondem com status HTTP 404; resolver isso (pré-renderização) fica para a etapa 6 do [roteiro](roteiro.md).
+- Para testar o build de produção localmente: `BASE_PATH=/portfoly/ npm run build` e `BASE_PATH=/portfoly/ npm run preview`.
+
+Configuração necessária uma vez no GitHub: em Settings → Pages, escolher "GitHub Actions" como fonte.
