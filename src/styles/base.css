@@ -74,14 +74,12 @@ picture {
 
 a {
   color: var(--accent);
-  text-decoration-line: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-  transition: text-decoration-thickness var(--duration-fast) var(--ease);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
 }
 
 a:hover {
-  text-decoration-thickness: 2px;
+  color: var(--text);
 }
 
 :focus-visible {

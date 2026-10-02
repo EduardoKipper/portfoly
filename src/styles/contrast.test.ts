@@ -34,6 +34,7 @@ const textPairs: [foreground: string, background: string][] = [
   ['sage', 'surface'],
   ['rose', 'surface'],
   ['bg', 'accent'],
+  ['bg', 'accent-hover'],
   ['bg', 'sage'],
   ['bg', 'rose'],
 ]
