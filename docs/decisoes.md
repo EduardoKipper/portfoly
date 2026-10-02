@@ -27,3 +27,7 @@ Pedido do usuário. Publicação gratuita a partir do próprio repositório, com
 
 - Consequência para o painel admin (etapa 5): o Decap CMS com backend GitHub precisa de um serviço de autenticação OAuth, que o GitHub Pages não oferece. Será preciso um pequeno proxy OAuth externo (por exemplo, um Cloudflare Worker gratuito) ou mover a hospedagem para um serviço que já o forneça.
 - Rotas profundas dependem do `404.html` como fallback (ver [arquitetura](arquitetura.md#publicação)).
+
+## 006 · Sveltia CMS no lugar do Decap (02/10/2026)
+
+O Sveltia CMS é o sucessor compatível do Decap: usa o mesmo formato de `config.yml`, também grava no repositório e permite login com token pessoal do GitHub. Isso elimina o serviço OAuth que o Decap exigiria no GitHub Pages (decisão 005). Detalhes de uso em [painel admin](painel-admin.md).

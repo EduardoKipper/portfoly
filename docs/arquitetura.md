@@ -20,7 +20,7 @@ src/
   content/      Textos do site, um diretório por idioma (pt/, en/)
   styles/       Tokens e estilos globais (ver identidade-visual.md)
   test/         Configuração e utilitários de teste
-public/         Arquivos servidos sem processamento (favicon, futuramente /admin e o currículo)
+public/         Arquivos servidos sem processamento: favicon, admin/ (painel) e images/ (mídia do painel)
 docs/           Esta documentação
 ```
 

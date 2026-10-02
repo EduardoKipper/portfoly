@@ -1,6 +1,6 @@
 # Conteúdo e idiomas
 
-**Regra:** nenhum texto visível fica fixo em componente. Todo texto vem dos arquivos em `src/content/` (e, a partir da etapa 5, do painel admin, que edita esses mesmos arquivos).
+**Regra:** nenhum texto visível fica fixo em componente. Todo texto vem dos arquivos em `src/content/` (editáveis pelo [painel admin](painel-admin.md), que grava nesses mesmos arquivos).
 
 ## Organização
 
