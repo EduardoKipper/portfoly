@@ -30,14 +30,17 @@ jobs:
       - run: npm run typecheck
       - run: npm test
 
+      # Endereço público do Pages (dono em minúsculas), usado em canonical, hreflang e sitemap.
+      - name: Endereço do site
+        run: |
+          owner="${{ github.repository_owner }}"
+          echo "SITE_URL=https://${owner,,}.github.io/${{ github.event.repository.name }}" >> "$GITHUB_ENV"
+
+      # Gera o app e pré-renderiza cada página, além do 404.html e do sitemap.
       - name: Build para o GitHub Pages
         run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
-
-      # O GitHub Pages não tem fallback de SPA: o 404.html devolve o app para rotas profundas.
-      - name: Fallback de rotas
-        run: cp dist/index.html dist/404.html
 
       - uses: actions/upload-pages-artifact@v5
         with:
