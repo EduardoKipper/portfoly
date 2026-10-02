@@ -1,18 +1,25 @@
+import { About } from '../sections/About'
+import { Contact } from '../sections/Contact'
+import { Education } from '../sections/Education'
+import { Experience } from '../sections/Experience'
+import { Hero } from '../sections/Hero'
+import { Projects } from '../sections/Projects'
+import { Skills } from '../sections/Skills'
 import { useContent } from '../i18n/LocaleContext'
 
 export function HomePage() {
-  const { ui } = useContent()
+  const { site } = useContent()
 
   return (
     <>
-      <title>{ui.meta.pageTitle}</title>
-      <section aria-labelledby="inicio-titulo">
-        <h1 id="inicio-titulo">
-          {ui.home.name}
-          <span className="hero-role">{ui.home.role}</span>
-        </h1>
-        <p>{ui.home.headline}</p>
-      </section>
+      <title>{site.meta.pageTitle}</title>
+      <Hero />
+      <Projects />
+      <About />
+      <Experience />
+      <Skills />
+      <Education />
+      <Contact />
     </>
   )
 }
