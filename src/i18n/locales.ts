@@ -29,3 +29,16 @@ export function homePath(locale: Locale): string {
 export function projectPath(locale: Locale, slug: string): string {
   return `${localePrefix[locale]}/${projectsSegment[locale]}/${slug}`
 }
+
+/** Caminho equivalente da página atual em outro idioma. */
+export function alternatePath(pathname: string, target: Locale): string {
+  const enPrefix = localePrefix.en
+  const isEnglish = pathname === enPrefix || pathname.startsWith(`${enPrefix}/`)
+  const source: Locale = isEnglish ? 'en' : 'pt'
+  const rest = isEnglish ? pathname.slice(enPrefix.length) : pathname
+
+  const projectMatch = rest.match(new RegExp(`^/${projectsSegment[source]}/([^/]+)/?$`))
+  if (projectMatch) return projectPath(target, projectMatch[1])
+  if (rest === '' || rest === '/') return homePath(target)
+  return `${localePrefix[target]}${rest}`
+}
