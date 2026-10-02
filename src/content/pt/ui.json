@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "pageTitle": "Eduardo Kipper — Desenvolvedor Full Stack",
+    "projectPageTitle": "{title} — Eduardo Kipper"
+  },
+  "skipToContent": "Pular para o conteúdo",
+  "home": {
+    "name": "Eduardo Kipper",
+    "role": "Desenvolvedor Full Stack",
+    "headline": "Desenvolvimento conectado ao negócio."
+  },
+  "project": {
+    "backToProjects": "Voltar aos projetos"
+  },
+  "notFound": {
+    "title": "Não encontrei esta página.",
+    "backHome": "Voltar ao portfólio"
+  }
+}

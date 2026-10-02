@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "slug": "sistema-interno-arquivos-comunicacao",
+      "title": "Internal file and communication system"
+    },
+    { "slug": "automacao-hotelbeds", "title": "Hotelbeds automation" },
+    { "slug": "aplicativo-gestao-interna", "title": "Internal management mobile app" },
+    {
+      "slug": "conciliacao-cartoes-virtuais",
+      "title": "Virtual card data automation and reconciliation"
+    },
+    { "slug": "automacao-caixa", "title": "Cash process automation" },
+    { "slug": "bi-faturamento-cartoes", "title": "Billing and card BI" },
+    { "slug": "formulario-notas-fiscais", "title": "Invoice entry form" }
+  ]
+}

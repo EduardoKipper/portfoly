@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "slug": "sistema-interno-arquivos-comunicacao",
+      "title": "Sistema interno de arquivos e comunicação"
+    },
+    { "slug": "automacao-hotelbeds", "title": "Automação Hotelbeds" },
+    { "slug": "aplicativo-gestao-interna", "title": "Aplicativo móvel de gestão interna" },
+    {
+      "slug": "conciliacao-cartoes-virtuais",
+      "title": "Automação e conciliação de dados de cartões virtuais"
+    },
+    { "slug": "automacao-caixa", "title": "Automação de caixa" },
+    { "slug": "bi-faturamento-cartoes", "title": "BI de faturamento e cartões" },
+    { "slug": "formulario-notas-fiscais", "title": "Formulário de notas fiscais" }
+  ]
+}
