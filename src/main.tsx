@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { routes } from './app/routes'
-import './index.css'
+import './styles/index.css'
 
 // BASE_URL vem do `base` do Vite (ex.: /portfoly/ no GitHub Pages).
 const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL })
