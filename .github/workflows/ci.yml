@@ -1,7 +1,9 @@
 name: CI e deploy
 
 on:
+  # Pull requests rodam as checagens; push no main também publica. Evita execuções duplicadas.
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
