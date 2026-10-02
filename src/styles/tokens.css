@@ -56,7 +56,7 @@
   --target-min: 44px;
 
   /* Foco */
-  --focus-color: var(--rose);
+  --focus-color: var(--accent);
   --focus-width: 2px;
   --focus-offset: 3px;
 

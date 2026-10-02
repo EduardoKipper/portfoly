@@ -43,6 +43,13 @@ describe('contraste da paleta', () => {
     expect(contrast(token(foreground), token(background))).toBeGreaterThanOrEqual(4.5)
   })
 
+  it('usa Âmbar no foco com pelo menos 3:1 sobre os fundos', () => {
+    expect(tokensCss).toMatch(/--focus-color:\s*var\(--accent\)/)
+    for (const background of ['bg', 'surface']) {
+      expect(contrast(token('accent'), token(background))).toBeGreaterThanOrEqual(3)
+    }
+  })
+
   it('reprova Marfim sobre Âmbar, como indicado na especificação', () => {
     expect(contrast(token('text'), token('accent'))).toBeLessThan(4.5)
   })
