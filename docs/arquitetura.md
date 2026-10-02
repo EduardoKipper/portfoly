@@ -13,6 +13,9 @@
 src/
   app/          Rotas e layouts (LocaleLayout define o idioma da árvore)
   pages/        Uma página por rota: HomePage, ProjectPage, NotFoundPage
+  sections/     Seções da página principal (Hero, Projects, About...) e seus estilos
+  components/   Peças reutilizáveis: Header, Footer, ProjectCard, SectionLink
+  lib/          Utilitários sem React (assetUrl)
   i18n/         Idiomas, caminhos por idioma e acesso ao conteúdo
   content/      Textos do site, um diretório por idioma (pt/, en/)
   styles/       Tokens e estilos globais (ver identidade-visual.md)
@@ -33,7 +36,9 @@ docs/           Esta documentação
 - Cada grupo de rotas é envolvido por um `LocaleLayout`, que fornece o idioma via contexto, ajusta `<html lang>` e renderiza o link "pular para o conteúdo".
 - Um slug que não existe no conteúdo mostra a página não encontrada.
 - Os caminhos são montados por `homePath` e `projectPath` em `src/i18n/locales.ts`; não escreva URLs fixas nos componentes.
-- As âncoras da página principal (`#projetos`, `#sobre`...) usam os mesmos ids nos dois idiomas.
+- As âncoras da página principal (`#inicio`, `#projetos`, `#sobre`, `#experiencia`, `#competencias`, `#formacao`, `#contato`) usam os mesmos ids nos dois idiomas. Links para elas usam `SectionLink`, que funciona a partir de qualquer página.
+- O `ScrollRestoration` do React Router rola até a âncora da URL e restaura a posição ao voltar.
+- Arquivos de `public/` (fotos, currículo) são referenciados com `assetUrl`, que respeita o `base` do Vite.
 - Títulos da aba usam o suporte nativo do React 19 a `<title>` dentro dos componentes.
 
 ## Publicação
