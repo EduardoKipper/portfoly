@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "pageTitle": "Eduardo Kipper — Desenvolvedor Full Stack",
+    "description": "Portfólio de Eduardo Kipper: aplicações web e mobile, automações em Python e soluções de dados conectadas às necessidades do negócio.",
+    "projectPageTitle": "{title} — Eduardo Kipper"
+  },
+  "brand": {
+    "name": "Eduardo Kipper",
+    "monogram": "EK."
+  },
+  "skipToContent": "Pular para o conteúdo",
+  "navigation": {
+    "label": "Navegação principal",
+    "items": [
+      {
+        "label": "Projetos",
+        "anchor": "projetos"
+      },
+      {
+        "label": "Sobre",
+        "anchor": "sobre"
+      },
+      {
+        "label": "Experiência",
+        "anchor": "experiencia"
+      },
+      {
+        "label": "Contato",
+        "anchor": "contato"
+      }
+    ]
+  },
+  "header": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "languageLabel": "Idioma",
+    "switchLanguage": "English"
+  },
+  "resume": {
+    "label": "Baixar currículo"
+  },
+  "project": {
+    "backToProjects": "Voltar aos projetos",
+    "contextTitle": "Contexto",
+    "roleTitle": "Contribuição",
+    "solutionTitle": "Solução",
+    "technologiesTitle": "Tecnologias",
+    "resultsTitle": "Resultados",
+    "teamSize": "Equipe de {count} pessoas",
+    "linksTitle": "Links",
+    "repository": "Repositório",
+    "demo": "Demonstração",
+    "nextProject": "Próximo projeto",
+    "viewDetails": "Ver detalhes"
+  },
+  "footer": {
+    "tagline": "Desenvolvimento conectado ao negócio.",
+    "backToTop": "Voltar ao início",
+    "socialLabel": "Redes"
+  },
+  "notFound": {
+    "title": "Não encontrei esta página.",
+    "backHome": "Voltar ao portfólio"
+  }
+}

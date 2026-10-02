@@ -2,16 +2,112 @@
   "items": [
     {
       "slug": "sistema-interno-arquivos-comunicacao",
-      "title": "Sistema interno de arquivos e comunicação"
+      "title": "Sistema interno de arquivos e comunicação",
+      "category": "Full Stack",
+      "featured": true,
+      "summary": "Plataforma interna com autenticação própria, gestão de arquivos e comunicação.",
+      "role": "Liderança técnica de uma equipe de 6 pessoas no desenvolvimento da plataforma.",
+      "teamSize": 6,
+      "solution": "Plataforma interna que reúne autenticação própria, gestão de arquivos e comunicação em um só sistema.",
+      "technologies": [
+        "Python",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "JWT",
+        "Docker"
+      ],
+      "result": "Plataforma com autenticação, gestão de arquivos e comunicação.",
+      "results": [
+        {
+          "value": "6 pessoas",
+          "label": "Equipe sob liderança técnica"
+        }
+      ]
     },
-    { "slug": "automacao-hotelbeds", "title": "Automação Hotelbeds" },
-    { "slug": "aplicativo-gestao-interna", "title": "Aplicativo móvel de gestão interna" },
+    {
+      "slug": "automacao-hotelbeds",
+      "title": "Automação Hotelbeds",
+      "category": "Automação",
+      "featured": true,
+      "summary": "Automação de lançamentos financeiros para reduzir o trabalho manual da equipe.",
+      "role": "Desenvolvimento da automação.",
+      "solution": "Automação dos lançamentos financeiros com integração de dados, substituindo etapas manuais da equipe.",
+      "technologies": ["Python", "Integração de dados", "Automação de processos"],
+      "result": "Economia de 16 horas semanais da equipe.",
+      "results": [
+        {
+          "value": "16 h/semana",
+          "label": "Economia de tempo da equipe"
+        }
+      ]
+    },
+    {
+      "slug": "aplicativo-gestao-interna",
+      "title": "Aplicativo móvel de gestão interna",
+      "category": "Mobile",
+      "featured": true,
+      "summary": "Aplicativo corporativo com foco em centralizar processos internos.",
+      "role": "Desenvolvimento de telas, componentes reutilizáveis e fluxos de navegação.",
+      "solution": "Interface e fluxos de navegação do aplicativo, preparados para integração com as APIs REST do sistema interno.",
+      "technologies": ["React Native", "Expo", "TypeScript", "JavaScript", "APIs REST"],
+      "result": "Telas, componentes e fluxos de navegação do aplicativo.",
+      "results": []
+    },
     {
       "slug": "conciliacao-cartoes-virtuais",
-      "title": "Automação e conciliação de dados de cartões virtuais"
+      "title": "Automação e conciliação de dados de cartões virtuais",
+      "category": "Automação e dados",
+      "featured": false,
+      "summary": "Automação e conciliação de dados financeiros utilizando Cielo e Hunit.",
+      "role": "Desenvolvimento de dashboards e controles para acompanhar cobranças, identificar divergências e apoiar a gestão financeira.",
+      "solution": "Automação da conciliação dos dados de cartões virtuais com dashboards e controles de acompanhamento.",
+      "technologies": ["Python", "Power BI", "Cielo", "Hunit", "Conciliação financeira"],
+      "result": "Acompanhamento de cobranças e identificação de divergências.",
+      "results": []
     },
-    { "slug": "automacao-caixa", "title": "Automação de caixa" },
-    { "slug": "bi-faturamento-cartoes", "title": "BI de faturamento e cartões" },
-    { "slug": "formulario-notas-fiscais", "title": "Formulário de notas fiscais" }
+    {
+      "slug": "automacao-caixa",
+      "title": "Automação de caixa",
+      "category": "Automação",
+      "featured": false,
+      "summary": "Padronização e automação do processo de caixa.",
+      "role": "Automação financeira e validação do processo.",
+      "solution": "Padronização das etapas do processo de caixa, com validação e automação financeira.",
+      "technologies": ["Python", "Validação", "Automação financeira"],
+      "result": "Economia de cerca de 8 horas a cada quinzena.",
+      "results": [
+        {
+          "value": "Cerca de 8 h/quinzena",
+          "label": "Economia no processo de caixa"
+        }
+      ]
+    },
+    {
+      "slug": "bi-faturamento-cartoes",
+      "title": "BI de faturamento e cartões",
+      "category": "Dados",
+      "featured": false,
+      "summary": "Dashboards operacionais usados diariamente para faturamento e controle de cartões.",
+      "role": "Criação de dashboards e apoio à identificação de uma brecha financeira.",
+      "solution": "Dashboards em Power BI com modelagem de dados e indicadores financeiros para o acompanhamento diário.",
+      "technologies": ["Power BI", "Modelagem de dados", "Indicadores financeiros"],
+      "result": "Apoio na identificação de uma brecha financeira de R$ 3 milhões, direcionada para solução.",
+      "results": []
+    },
+    {
+      "slug": "formulario-notas-fiscais",
+      "title": "Formulário de notas fiscais",
+      "category": "Front-end",
+      "featured": false,
+      "summary": "Aplicação com interface front-end para simplificar a entrada e o controle de notas fiscais.",
+      "role": "Desenvolvimento da aplicação.",
+      "solution": "Interface front-end integrada ao backend para registrar e controlar notas fiscais.",
+      "technologies": ["React", "TypeScript", "JavaScript", "Integração backend"],
+      "result": "Entrada e controle de notas fiscais simplificados.",
+      "results": []
+    }
   ]
 }

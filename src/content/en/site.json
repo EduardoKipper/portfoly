@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "pageTitle": "Eduardo Kipper — Full Stack Developer",
+    "description": "Eduardo Kipper's portfolio: web and mobile applications, Python automations and data solutions connected to business needs.",
+    "projectPageTitle": "{title} — Eduardo Kipper"
+  },
+  "brand": {
+    "name": "Eduardo Kipper",
+    "monogram": "EK."
+  },
+  "skipToContent": "Skip to content",
+  "navigation": {
+    "label": "Main navigation",
+    "items": [
+      {
+        "label": "Projects",
+        "anchor": "projetos"
+      },
+      {
+        "label": "About",
+        "anchor": "sobre"
+      },
+      {
+        "label": "Experience",
+        "anchor": "experiencia"
+      },
+      {
+        "label": "Contact",
+        "anchor": "contato"
+      }
+    ]
+  },
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language",
+    "switchLanguage": "Português"
+  },
+  "resume": {
+    "label": "Download résumé"
+  },
+  "project": {
+    "backToProjects": "Back to projects",
+    "contextTitle": "Context",
+    "roleTitle": "Contribution",
+    "solutionTitle": "Solution",
+    "technologiesTitle": "Technologies",
+    "resultsTitle": "Results",
+    "teamSize": "Team of {count} people",
+    "linksTitle": "Links",
+    "repository": "Repository",
+    "demo": "Live demo",
+    "nextProject": "Next project",
+    "viewDetails": "View details"
+  },
+  "footer": {
+    "tagline": "Development connected to the business.",
+    "backToTop": "Back to top",
+    "socialLabel": "Social"
+  },
+  "notFound": {
+    "title": "I couldn't find this page.",
+    "backHome": "Back to portfolio"
+  }
+}

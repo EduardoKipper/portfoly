@@ -1,0 +1,214 @@
+{
+  "hero": {
+    "role": "Full Stack Developer",
+    "headline": "Development connected to the business.",
+    "summary": "I build web and mobile applications, automations and data solutions that connect business needs to day-to-day operations. My experience combines full stack development, technical leadership and financial analysis.",
+    "location": "Florianópolis, Brazil",
+    "stackLabel": "Main technologies",
+    "stack": ["Python", "React", "React Native", "TypeScript", "Node.js"],
+    "primaryAction": {
+      "label": "See projects",
+      "anchor": "projetos"
+    },
+    "secondaryAction": {
+      "label": "Let's talk",
+      "anchor": "contato"
+    }
+  },
+  "highlights": {
+    "title": "Featured results",
+    "items": [
+      {
+        "value": "16 h/week",
+        "label": "Team time saved",
+        "context": "Hotelbeds automation",
+        "projectSlug": "automacao-hotelbeds"
+      },
+      {
+        "value": "6 people",
+        "label": "Team under technical leadership",
+        "context": "Internal file and communication system",
+        "projectSlug": "sistema-interno-arquivos-comunicacao"
+      },
+      {
+        "value": "About 8 h every two weeks",
+        "label": "Saved in the cash process",
+        "context": "Cash process automation",
+        "projectSlug": "automacao-caixa"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Solutions that are part of the operation.",
+    "intro": "Applications, automations and analyses built for real business needs.",
+    "moreTitle": "More projects"
+  },
+  "about": {
+    "title": "Technology with business context.",
+    "fullName": "Eduardo Kipper Della Santa Rubio",
+    "bio": "I am a Full Stack developer with hands-on experience in web and mobile applications, process automation and financial data analysis. At Rede Andrade, my role as Financial Analyst and Tech Lead connects operational needs to technology solutions, focusing on quality, observability and operational gains.",
+    "location": "Florianópolis, Brazil",
+    "approachTitle": "How I work",
+    "workingApproach": [
+      "Understanding business needs",
+      "Reusable components",
+      "Technical organization and delivery follow-up"
+    ],
+    "languagesTitle": "Languages",
+    "languages": ["Advanced English", "Basic Spanish"]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "company": "Rede Andrade",
+        "role": "Financial Analyst and Tech Lead",
+        "period": "2024 – present",
+        "summary": "Full stack development, mobile applications, financial automation and data analysis.",
+        "highlightsTitle": "Highlights",
+        "highlights": [
+          "Technical leadership of a 6-person team on the internal system",
+          "Mobile development with React Native and Expo",
+          "Automation of financial entries, cash, virtual cards and invoices",
+          "Reconciliation with Cielo and Hunit",
+          "Power BI dashboards"
+        ],
+        "toolsTitle": "Organization and delivery",
+        "tools": ["Obsidian", "Notion", "ClickUp", "Trello"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Tools and knowledge.",
+    "groups": [
+      {
+        "title": "Data",
+        "level": "Advanced",
+        "items": ["Power BI"]
+      },
+      {
+        "title": "Development",
+        "level": "Intermediate",
+        "items": [
+          "Python",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Node.js",
+          "REST APIs",
+          "Unit testing",
+          "Git",
+          "Microservices",
+          "Cloud",
+          "Observability"
+        ]
+      },
+      {
+        "title": "Currently learning",
+        "level": "Basic",
+        "items": ["PostgreSQL", "Redis", "Docker", "Vue/Vuetify", "Next.js"]
+      },
+      {
+        "title": "Mobile",
+        "items": ["React Native", "Expo", "TypeScript", "JavaScript"]
+      },
+      {
+        "title": "Web foundations",
+        "items": [
+          "HTML",
+          "CSS",
+          "Flexbox",
+          "Responsive layouts",
+          "Mobile-first",
+          "Forms",
+          "SEO",
+          "Accessibility"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education and learning",
+    "degrees": [
+      {
+        "degree": "Associate degree in Systems Analysis and Development",
+        "institution": "UNICESUSC",
+        "period": "2022 – 2024"
+      }
+    ],
+    "coursesTitle": "Courses and learning paths (in Portuguese)",
+    "courses": [
+      {
+        "title": "Tech Lead: liderança técnica e alinhamento entre engenharia e negócio",
+        "provider": "Alura",
+        "hours": 12,
+        "year": 2026
+      },
+      {
+        "title": "React Native: desenvolvendo com Expo",
+        "provider": "Alura",
+        "hours": 8,
+        "year": 2026
+      },
+      {
+        "title": "Autoliderança: planejando o desenvolvimento pessoal",
+        "provider": "Alura",
+        "hours": 8,
+        "year": 2026
+      },
+      {
+        "title": "HTML e CSS: ambiente, estrutura e estilo",
+        "provider": "Alura",
+        "hours": 20,
+        "year": 2025
+      },
+      {
+        "title": "HTML e CSS: formulários, SEO e acessibilidade",
+        "provider": "Alura",
+        "hours": 6,
+        "year": 2025
+      },
+      {
+        "title": "Internet: entendendo os fundamentos da web",
+        "provider": "Alura",
+        "hours": 8,
+        "year": 2025
+      },
+      {
+        "title": "Trilha A partir do zero: HTML e CSS para projetos web",
+        "provider": "Alura",
+        "hours": 49,
+        "year": 2023
+      },
+      {
+        "title": "CSS: Flexbox e layouts responsivos",
+        "provider": "Alura",
+        "hours": 6,
+        "year": 2023
+      }
+    ],
+    "hoursLabel": "{hours} h",
+    "initialCourses": 3,
+    "showAllCourses": "Show all courses",
+    "showFewerCourses": "Show fewer courses"
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "text": "Get in touch to talk about development, automation and opportunities in technology.",
+    "emailLabel": "Send an email",
+    "email": "eduardo.k.rubio@gmail.com",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/eduardo-kipper"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/EduardoKipper"
+      }
+    ],
+    "location": "Florianópolis, Brazil",
+    "workModes": "Remote, hybrid or on-site in Florianópolis",
+    "targetRoles": "Mid-level or senior positions"
+  }
+}

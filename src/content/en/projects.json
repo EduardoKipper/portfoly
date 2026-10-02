@@ -2,16 +2,112 @@
   "items": [
     {
       "slug": "sistema-interno-arquivos-comunicacao",
-      "title": "Internal file and communication system"
+      "title": "Internal file and communication system",
+      "category": "Full Stack",
+      "featured": true,
+      "summary": "Internal platform with its own authentication, file management and communication.",
+      "role": "Technical leadership of a 6-person team developing the platform.",
+      "teamSize": 6,
+      "solution": "Internal platform that brings its own authentication, file management and communication together in a single system.",
+      "technologies": [
+        "Python",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "JWT",
+        "Docker"
+      ],
+      "result": "Platform with authentication, file management and communication.",
+      "results": [
+        {
+          "value": "6 people",
+          "label": "Team under technical leadership"
+        }
+      ]
     },
-    { "slug": "automacao-hotelbeds", "title": "Hotelbeds automation" },
-    { "slug": "aplicativo-gestao-interna", "title": "Internal management mobile app" },
+    {
+      "slug": "automacao-hotelbeds",
+      "title": "Hotelbeds automation",
+      "category": "Automation",
+      "featured": true,
+      "summary": "Automation of financial entries to reduce the team's manual work.",
+      "role": "Development of the automation.",
+      "solution": "Automation of financial entries with data integration, replacing manual steps for the team.",
+      "technologies": ["Python", "Data integration", "Process automation"],
+      "result": "Saves the team 16 hours a week.",
+      "results": [
+        {
+          "value": "16 h/week",
+          "label": "Team time saved"
+        }
+      ]
+    },
+    {
+      "slug": "aplicativo-gestao-interna",
+      "title": "Internal management mobile app",
+      "category": "Mobile",
+      "featured": true,
+      "summary": "Corporate app focused on centralizing internal processes.",
+      "role": "Development of screens, reusable components and navigation flows.",
+      "solution": "App interface and navigation flows, prepared for integration with the internal system's REST APIs.",
+      "technologies": ["React Native", "Expo", "TypeScript", "JavaScript", "REST APIs"],
+      "result": "App screens, components and navigation flows.",
+      "results": []
+    },
     {
       "slug": "conciliacao-cartoes-virtuais",
-      "title": "Virtual card data automation and reconciliation"
+      "title": "Virtual card data automation and reconciliation",
+      "category": "Automation and data",
+      "featured": false,
+      "summary": "Automation and reconciliation of financial data using Cielo and Hunit.",
+      "role": "Development of dashboards and controls to track charges, identify discrepancies and support financial management.",
+      "solution": "Automated reconciliation of virtual card data with tracking dashboards and controls.",
+      "technologies": ["Python", "Power BI", "Cielo", "Hunit", "Financial reconciliation"],
+      "result": "Tracking of charges and identification of discrepancies.",
+      "results": []
     },
-    { "slug": "automacao-caixa", "title": "Cash process automation" },
-    { "slug": "bi-faturamento-cartoes", "title": "Billing and card BI" },
-    { "slug": "formulario-notas-fiscais", "title": "Invoice entry form" }
+    {
+      "slug": "automacao-caixa",
+      "title": "Cash process automation",
+      "category": "Automation",
+      "featured": false,
+      "summary": "Standardization and automation of the cash process.",
+      "role": "Financial automation and process validation.",
+      "solution": "Standardized cash process steps, with validation and financial automation.",
+      "technologies": ["Python", "Validation", "Financial automation"],
+      "result": "Saves about 8 hours every two weeks.",
+      "results": [
+        {
+          "value": "About 8 h every two weeks",
+          "label": "Saved in the cash process"
+        }
+      ]
+    },
+    {
+      "slug": "bi-faturamento-cartoes",
+      "title": "Billing and card BI",
+      "category": "Data",
+      "featured": false,
+      "summary": "Operational dashboards used daily for billing and card control.",
+      "role": "Dashboard creation and support in identifying a financial gap.",
+      "solution": "Power BI dashboards with data modeling and financial indicators for daily monitoring.",
+      "technologies": ["Power BI", "Data modeling", "Financial indicators"],
+      "result": "Helped identify a R$ 3 million financial gap, which was referred for resolution.",
+      "results": []
+    },
+    {
+      "slug": "formulario-notas-fiscais",
+      "title": "Invoice entry form",
+      "category": "Front-end",
+      "featured": false,
+      "summary": "Application with a front-end interface that simplifies invoice entry and control.",
+      "role": "Development of the application.",
+      "solution": "Front-end interface integrated with the backend to register and control invoices.",
+      "technologies": ["React", "TypeScript", "JavaScript", "Backend integration"],
+      "result": "Simpler invoice entry and control.",
+      "results": []
+    }
   ]
 }
