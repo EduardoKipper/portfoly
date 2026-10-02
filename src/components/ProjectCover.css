@@ -1,0 +1,14 @@
+.project-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: calc(var(--radius-card) - 4px);
+  object-fit: cover;
+}
+
+.project-cover--abstract {
+  background:
+    radial-gradient(circle at 85% 20%, rgb(242 138 46 / 55%) 0 14%, transparent 15%),
+    radial-gradient(circle at 18% 88%, rgb(157 178 140 / 35%) 0 10%, transparent 11%),
+    linear-gradient(135deg, var(--bg) 0%, #161c27 60%, var(--surface) 100%);
+  border: 1px solid var(--border-subtle);
+}

@@ -1,0 +1,61 @@
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  transition: border-color var(--duration-fast) var(--ease);
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  border-color: var(--accent);
+}
+
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-1);
+}
+
+.project-card__title {
+  font-size: var(--text-h3);
+}
+
+.project-card__link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* O link do título cobre o card inteiro, mantendo um único destino acessível. */
+.project-card__link::after {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  content: '';
+}
+
+.project-card__link:focus-visible {
+  outline: none;
+}
+
+.project-card__link:focus-visible::after {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+.project-card__result {
+  color: var(--sage);
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-card__cta {
+  margin-top: auto;
+  padding-top: var(--space-1);
+  color: var(--accent);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

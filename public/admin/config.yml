@@ -1,0 +1,466 @@
+# Painel admin (Sveltia CMS). Espelha src/content/schema.ts: ao mudar um campo, mude os dois.
+# Documentação: docs/painel-admin.md
+
+backend:
+  name: github
+  repo: EduardoKipper/portfoly
+  branch: main
+  commit_messages:
+    update: 'Atualiza {{collection}} “{{slug}}” pelo painel'
+
+media_folder: public/images
+public_folder: /images
+
+i18n:
+  structure: multiple_folders
+  locales: [pt, en]
+  default_locale: pt
+
+collections:
+  - name: conteudo
+    label: Conteúdo
+    files:
+      - name: home
+        label: Página principal
+        file: src/content/{{locale}}/home.json
+        format: json
+        i18n: true
+        fields:
+          - name: hero
+            label: Apresentação
+            widget: object
+            i18n: true
+            fields:
+              - { name: role, label: Função, widget: string, i18n: true }
+              - { name: headline, label: Frase de destaque, widget: string, i18n: true }
+              - { name: summary, label: Resumo, widget: text, i18n: true }
+              - { name: location, label: Localização, widget: string, i18n: true }
+              - { name: stackLabel, label: Rótulo das tecnologias, widget: string, i18n: true }
+              - name: stack
+                label: Tecnologias
+                widget: list
+                i18n: true
+                field: { name: item, label: Tecnologia, widget: string }
+              - name: primaryAction
+                label: Ação principal
+                widget: object
+                i18n: true
+                fields:
+                  - { name: label, label: Texto, widget: string, i18n: true }
+                  - {
+                      name: anchor,
+                      label: Seção,
+                      widget: select,
+                      options:
+                        [inicio, projetos, sobre, experiencia, competencias, formacao, contato],
+                      i18n: duplicate,
+                    }
+              - name: secondaryAction
+                label: Ação secundária
+                widget: object
+                i18n: true
+                fields:
+                  - { name: label, label: Texto, widget: string, i18n: true }
+                  - {
+                      name: anchor,
+                      label: Seção,
+                      widget: select,
+                      options:
+                        [inicio, projetos, sobre, experiencia, competencias, formacao, contato],
+                      i18n: duplicate,
+                    }
+              - {
+                  name: photo,
+                  label: Foto,
+                  widget: object,
+                  required: false,
+                  i18n: duplicate,
+                  fields:
+                    [
+                      { name: src, label: Imagem, widget: image },
+                      {
+                        name: alt,
+                        label: Texto alternativo,
+                        widget: string,
+                        i18n: true,
+                        required: false,
+                      },
+                      { name: width, label: Largura (px), widget: number, value_type: int },
+                      { name: height, label: Altura (px), widget: number, value_type: int },
+                    ],
+                }
+          - name: highlights
+            label: Resultados em destaque
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título (leitores de tela), widget: string, i18n: true }
+              - name: items
+                label: Resultados
+                widget: list
+                i18n: true
+                fields:
+                  - { name: value, label: Valor, widget: string, i18n: true }
+                  - { name: label, label: Descrição, widget: string, i18n: true }
+                  - { name: context, label: Contexto, widget: string, i18n: true }
+                  - name: projectSlug
+                    label: Projeto relacionado (slug)
+                    widget: string
+                    required: false
+                    i18n: duplicate
+          - name: projects
+            label: Seção de projetos
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - { name: intro, label: Introdução, widget: text, i18n: true }
+              - { name: moreTitle, label: Título dos outros projetos, widget: string, i18n: true }
+          - name: about
+            label: Sobre
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - { name: fullName, label: Nome completo, widget: string, i18n: duplicate }
+              - { name: bio, label: Bio, widget: text, i18n: true }
+              - { name: location, label: Localização, widget: string, i18n: true }
+              - { name: approachTitle, label: Título da abordagem, widget: string, i18n: true }
+              - name: workingApproach
+                label: Como trabalho
+                widget: list
+                i18n: true
+                field: { name: item, label: Item, widget: string }
+              - { name: languagesTitle, label: Título dos idiomas, widget: string, i18n: true }
+              - name: languages
+                label: Idiomas
+                widget: list
+                i18n: true
+                field: { name: item, label: Idioma, widget: string }
+              - {
+                  name: photo,
+                  label: Foto,
+                  widget: object,
+                  required: false,
+                  i18n: duplicate,
+                  fields:
+                    [
+                      { name: src, label: Imagem, widget: image },
+                      {
+                        name: alt,
+                        label: Texto alternativo,
+                        widget: string,
+                        i18n: true,
+                        required: false,
+                      },
+                      { name: width, label: Largura (px), widget: number, value_type: int },
+                      { name: height, label: Altura (px), widget: number, value_type: int },
+                    ],
+                }
+          - name: experience
+            label: Experiência
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - name: items
+                label: Experiências
+                widget: list
+                i18n: true
+                fields:
+                  - { name: company, label: Empresa, widget: string, i18n: duplicate }
+                  - { name: role, label: Cargo, widget: string, i18n: true }
+                  - { name: period, label: Período, widget: string, i18n: true }
+                  - { name: summary, label: Resumo, widget: text, i18n: true }
+                  - {
+                      name: highlightsTitle,
+                      label: Título dos destaques,
+                      widget: string,
+                      i18n: true,
+                    }
+                  - name: highlights
+                    label: Destaques
+                    widget: list
+                    i18n: true
+                    field: { name: item, label: Destaque, widget: string }
+                  - { name: toolsTitle, label: Título das ferramentas, widget: string, i18n: true }
+                  - name: tools
+                    label: Ferramentas
+                    widget: list
+                    i18n: true
+                    field: { name: item, label: Ferramenta, widget: string }
+          - name: skills
+            label: Competências
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - name: groups
+                label: Grupos
+                widget: list
+                i18n: true
+                fields:
+                  - { name: title, label: Nome do grupo, widget: string, i18n: true }
+                  - { name: level, label: Nível, widget: string, required: false, i18n: true }
+                  - name: items
+                    label: Itens
+                    widget: list
+                    i18n: true
+                    field: { name: item, label: Item, widget: string }
+          - name: education
+            label: Formação
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - name: degrees
+                label: Graduações
+                widget: list
+                i18n: true
+                fields:
+                  - { name: degree, label: Curso, widget: string, i18n: true }
+                  - { name: institution, label: Instituição, widget: string, i18n: duplicate }
+                  - { name: period, label: Período, widget: string, i18n: true }
+              - { name: coursesTitle, label: Título dos cursos, widget: string, i18n: true }
+              - name: courses
+                label: Cursos
+                widget: list
+                i18n: true
+                fields:
+                  - { name: title, label: Curso, widget: string, i18n: true }
+                  - { name: provider, label: Instituição, widget: string, i18n: duplicate }
+                  - {
+                      name: hours,
+                      label: Horas,
+                      widget: number,
+                      value_type: float,
+                      i18n: duplicate,
+                    }
+                  - { name: year, label: Ano, widget: number, value_type: int, i18n: duplicate }
+                  - name: certificateUrl
+                    label: Link do certificado
+                    widget: string
+                    required: false
+                    i18n: duplicate
+              - {
+                  name: hoursLabel,
+                  label: 'Formato das horas (use {hours})',
+                  widget: string,
+                  i18n: true,
+                }
+              - name: initialCourses
+                label: Cursos exibidos inicialmente
+                widget: number
+                value_type: int
+                i18n: duplicate
+              - { name: showAllCourses, label: Botão ver todos, widget: string, i18n: true }
+              - { name: showFewerCourses, label: Botão ver menos, widget: string, i18n: true }
+          - name: contact
+            label: Contato
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - { name: text, label: Texto, widget: text, i18n: true }
+              - { name: emailLabel, label: Texto do botão de e-mail, widget: string, i18n: true }
+              - { name: email, label: E-mail, widget: string, i18n: duplicate }
+              - name: links
+                label: Links
+                widget: list
+                i18n: true
+                fields:
+                  - { name: label, label: Nome, widget: string, i18n: true }
+                  - { name: url, label: URL, widget: string, i18n: duplicate }
+              - { name: location, label: Localização, widget: string, i18n: true }
+              - { name: workModes, label: Modelos de trabalho, widget: string, i18n: true }
+              - name: targetRoles
+                label: Vagas de interesse
+                widget: string
+                required: false
+                i18n: true
+
+      - name: projects
+        label: Projetos
+        file: src/content/{{locale}}/projects.json
+        format: json
+        i18n: true
+        fields:
+          - name: items
+            label: Projetos
+            widget: list
+            i18n: true
+            summary: '{{fields.title}}'
+            fields:
+              - name: slug
+                label: Slug (endereço)
+                widget: string
+                pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Use minúsculas e hífens']
+                i18n: duplicate
+              - { name: title, label: Título, widget: string, i18n: true }
+              - { name: category, label: Categoria, widget: string, i18n: true }
+              - {
+                  name: featured,
+                  label: Destaque na página principal,
+                  widget: boolean,
+                  i18n: duplicate,
+                }
+              - { name: summary, label: Resumo, widget: text, i18n: true }
+              - { name: context, label: Contexto, widget: text, required: false, i18n: true }
+              - { name: role, label: Contribuição, widget: text, i18n: true }
+              - name: teamSize
+                label: Tamanho da equipe
+                widget: number
+                value_type: int
+                required: false
+                i18n: duplicate
+              - { name: solution, label: Solução, widget: text, i18n: true }
+              - name: technologies
+                label: Tecnologias
+                widget: list
+                i18n: true
+                field: { name: item, label: Tecnologia, widget: string }
+              - { name: result, label: Resultado (frase), widget: text, i18n: true }
+              - name: results
+                label: Métricas
+                widget: list
+                required: false
+                i18n: true
+                fields:
+                  - { name: value, label: Valor, widget: string, i18n: true }
+                  - { name: label, label: Descrição, widget: string, i18n: true }
+              - {
+                  name: cover,
+                  label: Capa,
+                  widget: object,
+                  required: false,
+                  i18n: duplicate,
+                  fields:
+                    [
+                      { name: src, label: Imagem, widget: image },
+                      {
+                        name: alt,
+                        label: Texto alternativo,
+                        widget: string,
+                        i18n: true,
+                        required: false,
+                      },
+                      { name: width, label: Largura (px), widget: number, value_type: int },
+                      { name: height, label: Altura (px), widget: number, value_type: int },
+                    ],
+                }
+              - name: repositoryUrl
+                label: Link do repositório
+                widget: string
+                required: false
+                i18n: duplicate
+              - name: demoUrl
+                label: Link da demonstração
+                widget: string
+                required: false
+                i18n: duplicate
+
+      - name: site
+        label: Textos gerais
+        file: src/content/{{locale}}/site.json
+        format: json
+        i18n: true
+        fields:
+          - name: meta
+            label: Metadados
+            widget: object
+            i18n: true
+            fields:
+              - { name: pageTitle, label: Título da página, widget: string, i18n: true }
+              - { name: description, label: Descrição (buscadores), widget: text, i18n: true }
+              - {
+                  name: projectPageTitle,
+                  label: 'Título das páginas de projeto (use {title})',
+                  widget: string,
+                  i18n: true,
+                }
+          - name: brand
+            label: Marca
+            widget: object
+            i18n: true
+            fields:
+              - { name: name, label: Nome, widget: string, i18n: duplicate }
+              - { name: monogram, label: Monograma, widget: string, i18n: duplicate }
+          - { name: skipToContent, label: Link pular para o conteúdo, widget: string, i18n: true }
+          - name: navigation
+            label: Menu
+            widget: object
+            i18n: true
+            fields:
+              - { name: label, label: Nome do menu (leitores de tela), widget: string, i18n: true }
+              - name: items
+                label: Itens
+                widget: list
+                i18n: true
+                fields:
+                  - { name: label, label: Texto, widget: string, i18n: true }
+                  - {
+                      name: anchor,
+                      label: Seção,
+                      widget: select,
+                      options:
+                        [inicio, projetos, sobre, experiencia, competencias, formacao, contato],
+                      i18n: duplicate,
+                    }
+          - name: header
+            label: Cabeçalho
+            widget: object
+            i18n: true
+            fields:
+              - { name: openMenu, label: Abrir menu, widget: string, i18n: true }
+              - { name: closeMenu, label: Fechar menu, widget: string, i18n: true }
+              - { name: languageLabel, label: Rótulo do idioma, widget: string, i18n: true }
+              - { name: switchLanguage, label: Nome do outro idioma, widget: string, i18n: true }
+          - name: resume
+            label: Currículo
+            widget: object
+            i18n: true
+            fields:
+              - { name: label, label: Texto do botão, widget: string, i18n: true }
+              - { name: file, label: Arquivo PDF, widget: file, required: false, i18n: true }
+          - name: project
+            label: Rótulos do detalhe de projeto
+            widget: object
+            i18n: true
+            fields:
+              - { name: backToProjects, label: Voltar aos projetos, widget: string, i18n: true }
+              - { name: contextTitle, label: Contexto, widget: string, i18n: true }
+              - { name: roleTitle, label: Contribuição, widget: string, i18n: true }
+              - { name: solutionTitle, label: Solução, widget: string, i18n: true }
+              - { name: technologiesTitle, label: Tecnologias, widget: string, i18n: true }
+              - { name: resultsTitle, label: Resultados, widget: string, i18n: true }
+              - {
+                  name: teamSize,
+                  label: 'Tamanho da equipe (use {count})',
+                  widget: string,
+                  i18n: true,
+                }
+              - { name: linksTitle, label: Links, widget: string, i18n: true }
+              - { name: repository, label: Repositório, widget: string, i18n: true }
+              - { name: demo, label: Demonstração, widget: string, i18n: true }
+              - { name: nextProject, label: Próximo projeto, widget: string, i18n: true }
+              - { name: viewDetails, label: Ver detalhes, widget: string, i18n: true }
+          - name: footer
+            label: Rodapé
+            widget: object
+            i18n: true
+            fields:
+              - { name: tagline, label: Assinatura, widget: string, required: false, i18n: true }
+              - { name: backToTop, label: Voltar ao início, widget: string, i18n: true }
+              - {
+                  name: socialLabel,
+                  label: Nome dos links (leitores de tela),
+                  widget: string,
+                  i18n: true,
+                }
+          - name: notFound
+            label: Página não encontrada
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Título, widget: string, i18n: true }
+              - { name: backHome, label: Botão de retorno, widget: string, i18n: true }
