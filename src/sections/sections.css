@@ -185,8 +185,19 @@
   line-height: var(--leading-tight);
 }
 
-.highlight__context {
-  color: var(--text-muted);
+/* Link para o projeto: Âmbar com seta, já que os links não usam sublinhado. */
+a.highlight__context {
+  align-self: flex-start;
+  color: var(--accent);
+}
+
+a.highlight__context::after {
+  margin-left: 0.35em;
+  content: '→';
+}
+
+a.highlight__context:hover {
+  color: var(--text);
 }
 
 /* Experiência */
