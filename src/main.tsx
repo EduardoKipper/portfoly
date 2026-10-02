@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { routes } from './app/routes'
 import './index.css'
 
-const router = createBrowserRouter(routes)
+// BASE_URL vem do `base` do Vite (ex.: /portfoly/ no GitHub Pages).
+const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
