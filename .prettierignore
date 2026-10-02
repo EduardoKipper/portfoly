@@ -1,3 +1,5 @@
 dist
 node_modules
 package-lock.json
+# Conteúdo gravado pelo painel admin, que usa a própria formatação de JSON.
+src/content/**/*.json
