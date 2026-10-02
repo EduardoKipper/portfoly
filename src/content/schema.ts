@@ -45,8 +45,7 @@ export const siteSchema = z.object({
   header: z.object({
     openMenu: text,
     closeMenu: text,
-    languageLabel: text,
-    switchLanguage: text,
+    englishVersion: text,
   }),
   resume: z.object({ label: text, file: sitePath.optional() }),
   project: z.object({

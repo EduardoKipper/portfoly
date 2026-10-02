@@ -1,0 +1,75 @@
+.language-switch {
+  --switch-pad: 3px;
+  --flag-w: 28px;
+  --flag-h: 20px;
+
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  /* Área de toque de 44 px de altura; a pílula visível fica centralizada. */
+  min-height: var(--target-min);
+  padding: calc((var(--target-min) - var(--flag-h)) / 2 - 1px) 7px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg);
+  cursor: pointer;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.language-switch__flag {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: var(--flag-w);
+  height: var(--flag-h);
+  overflow: hidden;
+  border-radius: 4px;
+  opacity: 0.45;
+  filter: grayscale(0.6);
+  transition:
+    opacity var(--duration-base) var(--ease),
+    filter var(--duration-base) var(--ease);
+  pointer-events: none;
+}
+
+.language-switch__flag svg {
+  width: 100%;
+  height: 100%;
+}
+
+.language-switch[aria-checked='false'] .language-switch__flag--pt,
+.language-switch[aria-checked='true'] .language-switch__flag--en {
+  opacity: 1;
+  filter: none;
+}
+
+/* Seletor: anel âmbar que envolve a bandeira ativa. */
+.language-switch__thumb {
+  position: absolute;
+  top: 50%;
+  left: calc(7px - var(--switch-pad));
+  width: calc(var(--flag-w) + 2 * var(--switch-pad));
+  height: calc(var(--flag-h) + 2 * var(--switch-pad));
+  margin-top: calc((var(--flag-h) + 2 * var(--switch-pad)) / -2);
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  transition: transform var(--duration-base) var(--ease);
+  pointer-events: none;
+}
+
+.language-switch[aria-checked='true'] .language-switch__thumb {
+  transform: translateX(calc(var(--flag-w) + 6px));
+}
+
+.language-switch[data-dragging='true'] .language-switch__thumb {
+  transition: none;
+}
+
+.language-switch:hover {
+  border-color: var(--accent);
+}
